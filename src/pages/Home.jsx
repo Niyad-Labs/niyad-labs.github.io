@@ -1,0 +1,70 @@
+import { useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Box } from "@mui/material";
+// objects
+import CameraController from "../objects/CameraController";
+import Bee from "../objects/Bee";
+import Floor from "../objects/Floor";
+import PointLights from "../objects/PointLights";
+// import Name from "../objects/Name";
+import AboutSection from "../objects/AboutSection";
+// theme
+import { tokens } from "../Theme";
+import { useTheme } from "@mui/material";
+// components
+import Loader from "../components/Loader";
+// orbital control
+import { OrbitControls } from "@react-three/drei";
+import OrbitControlTBtn from "../components/OrbitControlTBtn";
+import ServicesSection from "../objects/ServicesSection";
+import TechStack from "../objects/TechStack";
+
+const Home = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const [loading, setLoading] = useState(true);
+  const [orbitEnabled, setOrbitEnabled] = useState(false);
+  return (
+    <>
+      <Box
+        sx={{
+          height: "400vh",
+        }}
+      >
+        {loading && <Loader />}
+        <Canvas
+          shadows
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            // pointerEvents: orbitEnabled ? "auto" : "none",
+            zIndex: 0,
+          }}
+          camera={{ fov: window.innerWidth < 768 ? 90 : 45 }}
+        >
+          {orbitEnabled && <OrbitControls />}
+          <CameraController />
+          <fog attach="fog" args={["#000000", 10, 40]} />
+          <ambientLight />
+          <PointLights />
+          <color attach="background" args={[colors.room]} />
+          <Floor />
+          <Bee onLoaded={() => setLoading(false)} />
+          {/* <Name /> */}
+          <AboutSection />
+          <ServicesSection />
+          <TechStack />
+        </Canvas>
+        <OrbitControlTBtn
+          orbitEnabled={orbitEnabled}
+          setOrbitEnabled={setOrbitEnabled}
+        />
+      </Box>
+    </>
+  );
+};
+
+export default Home;
