@@ -1,0 +1,74 @@
+/* TEAM */
+
+Developer:
+Muhammed Niyad
+
+Role:
+Full-Stack Software Developer (MERN Stack)
+
+Location:
+Kerala, India
+
+Specialization:
+Full-Stack Web Development, Backend Engineering, AI Integration, Desktop Applications, ERP-style Systems
+
+Skills:
+React.js, Node.js, Express.js, MongoDB, PostgreSQL, FastAPI, Python, Flutter, Docker, Electron.js, Three.js, WebSockets, Material UI
+
+Portfolio:
+https://niyad-labs.github.io/My-Portfolio
+
+GitHub:
+https://github.com/Niyad-Labs
+
+LinkedIn:
+https://linkedin.com/in/muhammed-niyad
+
+Email:
+muhammedniyad720@gmail.com
+
+Wellfound:
+https://wellfound.com/u/muhammed-niyad
+
+Instagram:
+https://instagram.com/mr.niyad
+
+
+/* SITE */
+
+Site Name:
+Niyad Labs Portfolio
+
+Version:
+2.0
+
+Website:
+https://niyad-labs.github.io/My-Portfolio
+
+Built With:
+React.js
+Vite
+Three.js
+React Three Fiber
+Drei
+Material UI
+GSAP
+JavaScript (ES6+)
+HTML5
+CSS3
+
+Purpose:
+A cinematic 3D portfolio showcasing full-stack software development projects, desktop applications, AI-powered solutions, ERP-style systems, and modern web technologies.
+
+Featured Projects:
+- PixelPact (AI-powered SaaS Platform)
+- Share With Node (Desktop File Sharing)
+- 3D Portfolio Website
+- BookNesto
+- Brandism
+
+Open Source:
+Most showcased projects are available on GitHub under the Niyad-Labs organization/profile.
+
+Last Updated:
+2026

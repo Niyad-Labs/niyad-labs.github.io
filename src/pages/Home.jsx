@@ -18,6 +18,10 @@ import { OrbitControls } from "@react-three/drei";
 import OrbitControlTBtn from "../components/OrbitControlTBtn";
 import ServicesSection from "../objects/ServicesSection";
 import TechStack from "../objects/TechStack";
+import Projects from "../objects/Projects";
+import Contacts from "../objects/Contacts";
+import Navbar from "../components/Navbar";
+import SeoContent from "../components/SeoContent";
 
 const Home = () => {
   const theme = useTheme();
@@ -32,6 +36,8 @@ const Home = () => {
         }}
       >
         {loading && <Loader />}
+        <SeoContent />
+        <Navbar />
         <Canvas
           shadows
           style={{
@@ -57,6 +63,8 @@ const Home = () => {
           <AboutSection />
           <ServicesSection />
           <TechStack />
+          <Projects />
+          <Contacts />
         </Canvas>
         <OrbitControlTBtn
           orbitEnabled={orbitEnabled}

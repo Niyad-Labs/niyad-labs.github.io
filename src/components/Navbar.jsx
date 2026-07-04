@@ -1,99 +1,110 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  IconButton,
-  Drawer,
-  List,
-  ListItemButton,
-  ListItemText,
-  Box,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Drawer, Box, Button } from "@mui/material";
 import { useState } from "react";
-
-const pages = [
-  "About",
-  "Services",
-  "Tech Stack",
-  "Projects",
-  "Contact",
-  "Resume",
-];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const scrollToProgress = (progress) => {
+    setOpen(false);
+    const maxScroll =
+      document.documentElement.scrollHeight - window.innerHeight;
 
+    window.scrollTo({
+      top: maxScroll * progress,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
-      <AppBar
-        position="fixed"
-        elevation={0}
-        // sx={{
-        //   background: "rgba(20,20,20,0.25)",
-        //   backdropFilter: "blur(10px)",
-        //   borderBottom: "1px solid rgba(255,255,255,0.08)",
-        // }}
+      <Box
+        onClick={() => setOpen(!open)}
+        sx={{
+          margin: "10px",
+          position: "fixed",
+          right: 0,
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          width: 34,
+          height: 28,
+          cursor: "pointer",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
       >
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          {/* Logo */}
-          <Typography
-            variant="h5"
-            sx={{
-              fontWeight: 700,
-              letterSpacing: 2,
-              fontFamily: "BodoniModaSC",
-            }}
-          >
-            Niyad-Labs
-          </Typography>
-
-          {/* Desktop Menu */}
+        {[0, 1, 2].map((i) => (
           <Box
+            key={i}
             sx={{
-              display: {
-                xs: "none",
-                md: "flex",
-              },
-                //   background:" linear-gradient(90deg, rgb(0 0 0 / 0%), rgba(0, 0, 0, 35))",
-              gap: 2,
+              height: 3,
+              borderRadius: 5,
+              bgcolor: "white",
+              transition: "all .35s ease",
+
+              width: open
+                ? i === 0
+                  ? "35%"
+                  : i === 1
+                    ? "70%"
+                    : "100%"
+                : "100%",
+
+              ml: open ? (i === 0 ? "65%" : i === 1 ? "30%" : "0%") : "0%",
             }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                color="inherit"
-                sx={{
-                  textTransform: "none",
-                  fontSize: "1rem",
-                }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          {/* Mobile Menu */}
-          <IconButton
+          />
+        ))}
+      </Box>
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={() => setOpen(false)}
+        slotProps={{
+          paper: {
+            sx: {
+              width: "100%",
+              background:
+                "linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,1))",
+              // backdropFilter: "blur(20px)",
+              color: "white",
+              borderLeft: "1px solid rgba(255,255,255,0.1)",
+            },
+          },
+        }}
+      >
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            justifyContent: "center",
+            pr: 5,
+            gap: 2,
+          }}
+        >
+          <Button color="inherit" onClick={() => scrollToProgress(0.12)}>
+            About
+          </Button>
+          <Button
             color="inherit"
-            sx={{ display: { xs: "flex", md: "none" } }}
-            onClick={() => setOpen(true)}
+            component="a"
+            href="/resume"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <Box sx={{ width: 260 }}>
-          <List>
-            {pages.map((page) => (
-              <ListItemButton key={page} onClick={() => setOpen(false)}>
-                <ListItemText primary={page} />
-              </ListItemButton>
-            ))}
-          </List>
+            Resume
+          </Button>
+          <Button color="inherit" onClick={() => scrollToProgress(0.3)}>
+            Services
+          </Button>
+          <Button color="inherit">Certificates</Button>
+          <Button color="inherit" onClick={() => scrollToProgress(0.54)}>
+            Tech Stack
+          </Button>
+          <Button color="inherit" onClick={() => scrollToProgress(0.67)}>
+            Projects
+          </Button>
+          <Button color="inherit" onClick={() => scrollToProgress(1)}>
+            Contact
+          </Button>
         </Box>
       </Drawer>
     </>

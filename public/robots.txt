@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niyad-labs.github.io/sitemap.xml
+
+Host: https://niyad-labs.github.io/

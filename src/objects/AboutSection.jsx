@@ -11,9 +11,9 @@ export default function AboutSection() {
         position={[0, 0, 0]}
       />
       <Text
-        position={[0, 2, -17]}
+        position={[0, 1.5, -19]}
         castShadow
-        font="/src/assets/fonts/BodoniModaSC.ttf"
+        font="/fonts/BodoniModaSC.ttf"
         fontSize={0.4}
         maxWidth={14}
         fontWeight="bold"
@@ -32,7 +32,7 @@ I'm Muhammed Niyad, a Full-Stack Developer specializing in the MERN stack with o
           size={2.3}
           height={0.5}
           castShadow
-          position={[-4.9, -2.5, 0]}
+          position={[-4.9, -2.5, 1]}
         >
           !
           <meshStandardMaterial color="#c5c5c5" />
@@ -43,9 +43,9 @@ I'm Muhammed Niyad, a Full-Stack Developer specializing in the MERN stack with o
           castShadow
           height={0.3}
           lineHeight={0.8}
-          position={[-4, -1, 0]}
+          position={[-4, -1, 1]}
         >
-          {"Muhammed \n Niyad"}
+          {"MUHAMMED \n NIYAD"}
           <meshStandardMaterial color="#c5c5c5" />
         </Text3D>
       </group>

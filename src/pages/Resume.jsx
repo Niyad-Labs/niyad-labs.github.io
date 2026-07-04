@@ -1,9 +1,7 @@
 import { Button, Container, Stack, Typography } from "@mui/material";
 import { ArrowBack, Download } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
 
 export default function Resume() {
-  const navigate = useNavigate();
 
   const fileId = "1eRvf69PZt2swr_UJFxk4kLBcqtUCVId-";
 
@@ -24,7 +22,7 @@ export default function Resume() {
         <Button
           variant="outlined"
           startIcon={<ArrowBack />}
-          onClick={() => navigate(-1)}
+          onClick={() => window.close()}
         >
           Back
         </Button>

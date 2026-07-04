@@ -14,6 +14,7 @@ const techs = [
   "Express.js",
   "Three js",
   "MUI",
+  "SEO",
   "GitHub",
 ];
 
@@ -25,7 +26,7 @@ export default function TechStack() {
   });
 
   return (
-    <group position={[0, 2, -51]}>
+    <group position={[0, 2, -56]}>
       {/* Center */}
       <Text3D
         font="fonts/Bodoni Moda SC_Regular.json"

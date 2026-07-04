@@ -10,7 +10,7 @@ export default function CameraController() {
 
   useEffect(() => {
     // Starting position
-    camera.position.set(20, 20, 0);
+    camera.position.set(15, 15, -110);
 
     // Intro animation (like racing track fly-through)
     gsap.to(camera.position, {
@@ -37,7 +37,7 @@ export default function CameraController() {
   }, [camera]);
 
   useFrame(() => {
-    camera.lookAt(0, 0, -130);
+    camera.lookAt(0, 1, -130);
   });
 
   return null;
