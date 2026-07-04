@@ -1,0 +1,123 @@
+# llms.txt
+
+[PROFILE]
+Name = Muhammed Niyad
+Brand = Niyad Labs
+Role = Full-Stack Software Developer
+Specialization = MERN Stack, AI Integration, Backend Development, SaaS, ERP Systems
+Location = Kerala, India
+Available_For = Freelance, Contract, Full-Time Opportunities
+
+[ABOUT]
+Muhammed Niyad is a Full-Stack Software Developer specializing in building scalable web, desktop, and mobile applications. He develops modern SaaS platforms, ERP-style business systems, AI-powered applications, REST APIs, and real-time software using the MERN stack, FastAPI, Flutter, Docker, and modern frontend technologies.
+
+This website is a cinematic 3D portfolio designed to showcase software engineering projects, technical skills, freelance services, and professional experience.
+
+[SERVICES]
+
+- Full-Stack Web Development
+- MERN Stack Development
+- React.js Development
+- Node.js & Express.js Backend Development
+- FastAPI Development
+- REST API Development & Integration
+- AI Integration (LLMs, Image Generation, Automation)
+- MongoDB & PostgreSQL Database Design
+- ERP & Business Workflow Systems
+- SaaS Application Development
+- Real-Time Applications (WebSockets)
+- Flutter Mobile App Development
+- Electron Desktop Applications
+- Docker Containerization
+- Authentication & Authorization (JWT/RBAC)
+- Performance Optimization
+- Bug Fixing & Feature Development
+- Existing Project Maintenance
+
+[TECH_STACK]
+
+Frontend = React.js, JavaScript (ES6+), HTML5, CSS3, Sass, Material UI, Bootstrap, Three.js, React Three Fiber
+Backend = Node.js, Express.js, FastAPI
+Database = MongoDB, PostgreSQL, MySQL
+Mobile = Flutter
+Desktop = Electron.js
+DevOps = Docker, Docker Compose
+Tools = Git, GitHub, Postman, VS Code, Figma
+Other = WebSockets, JWT Authentication, REST APIs, Axios, Fetch API
+
+[FEATURED_PROJECTS]
+
+PixelPact
+Type = AI-powered SaaS Platform
+Description = Full-stack digital art collaboration platform featuring AI-assisted artwork generation, ERP-style order management, blockchain ownership, secure payments, artist collaboration, admin dashboard, analytics, and Flutter mobile support.
+
+Share With Node
+Type = Desktop Application
+Description = Open-source Electron application for high-speed local network file sharing with QR-code pairing, secure authentication, media streaming, and GitHub Releases distribution.
+
+BookNesto
+Type = Full-Stack CRUD Application
+Description = Book management platform with authentication, CRUD operations, MongoDB relationships, search, filtering, file uploads, and EJS rendering.
+
+Brandism
+Type = Client Website
+Description = Professional branding agency website with responsive design and service-focused user experience.
+
+Portfolio
+Type = Interactive 3D Website
+Description = Cinematic React + Three.js portfolio with animated scenes, project showcase, smooth transitions, and responsive design.
+
+[CLIENTS]
+
+- Startups
+- Small Businesses
+- Agencies
+- Individual Entrepreneurs
+- Educational Projects
+- Open Source Projects
+
+[INDUSTRIES]
+
+- SaaS
+- Digital Marketplace
+- ERP Systems
+- Business Automation
+- AI Applications
+- Portfolio Websites
+- Branding
+- Education
+- E-commerce
+
+[WEBSITE]
+
+Name = Niyad Labs Portfolio
+Framework = React + Vite
+3D = Three.js + React Three Fiber + Drei
+Animation = GSAP
+Deployment = GitHub Pages
+
+[LINKS]
+
+Portfolio = https://niyad-labs.github.io/My-Portfolio
+GitHub = https://github.com/Niyad-Labs
+LinkedIn = https://linkedin.com/in/muhammed-niyad
+Wellfound = https://wellfound.com/u/muhammed-niyad
+Instagram = https://instagram.com/mr.niyad
+
+[CONTACT]
+
+Email = muhammedniyad720@gmail.com
+Location = Kerala, India
+
+[SEO]
+
+Keywords = Full Stack Developer, MERN Stack Developer, React Developer, Node.js Developer, FastAPI Developer, Backend Developer, Software Engineer, SaaS Development, ERP Development, AI Integration, Desktop Application Development, Flutter Developer, Docker, Three.js Portfolio, Freelance Developer, Kerala, India
+
+[LICENSE]
+
+Portfolio content © Muhammed Niyad.
+Project source code availability varies by repository.
+
+[LAST_UPDATED]
+
+2026
