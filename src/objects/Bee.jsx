@@ -8,8 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // animation names 1 _bee_idle, 2 _bee_hover, 3 _bee_take_off_and_land
 
 gsap.registerPlugin(ScrollTrigger);
-
-export default function Bee({ onLoaded }) {
+// { onLoaded }
+export default function Bee() {
   const groupRef = useRef();
   const mixerRef = useRef();
   let scrollTimeout = useRef(null);
@@ -18,11 +18,11 @@ export default function Bee({ onLoaded }) {
   const actionsRef = useRef({});
   const activeActionRef = useRef();
 
-  useEffect(() => {
-    if (scene && onLoaded) {
-      onLoaded();
-    }
-  }, [scene, onLoaded]);
+  // useEffect(() => {
+  //   if (scene && onLoaded) {
+  //     onLoaded();
+  //   }
+  // }, [scene, onLoaded]);
   useEffect(() => {
     if (!scene || animations.length === 0) return;
 

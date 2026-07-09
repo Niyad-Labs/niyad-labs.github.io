@@ -22,11 +22,12 @@ import Projects from "../objects/Projects";
 import Contacts from "../objects/Contacts";
 import Navbar from "../components/Navbar";
 import SeoContent from "../components/SeoContent";
+import BgMusic from "../components/BgMusic";
 
 const Home = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [loading, setLoading] = useState(true);
+  const [started, setStarted] = useState(false);
   const [orbitEnabled, setOrbitEnabled] = useState(false);
   return (
     <>
@@ -35,7 +36,7 @@ const Home = () => {
           height: "400vh",
         }}
       >
-        {loading && <Loader />}
+        {!started && <Loader onStart={() => setStarted(true)} />}
         <SeoContent />
         <Navbar />
         <Canvas
@@ -52,13 +53,13 @@ const Home = () => {
           camera={{ fov: window.innerWidth < 768 ? 90 : 45 }}
         >
           {orbitEnabled && <OrbitControls />}
-          <CameraController />
+          <CameraController start={started} />
           <fog attach="fog" args={["#000000", 10, 40]} />
           <ambientLight />
           <PointLights />
           <color attach="background" args={[colors.room]} />
           <Floor />
-          <Bee onLoaded={() => setLoading(false)} />
+          <Bee />
           {/* <Name /> */}
           <AboutSection />
           <ServicesSection />
@@ -70,6 +71,7 @@ const Home = () => {
           orbitEnabled={orbitEnabled}
           setOrbitEnabled={setOrbitEnabled}
         />
+        <BgMusic play={started} />
       </Box>
     </>
   );

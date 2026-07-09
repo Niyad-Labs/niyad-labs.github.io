@@ -9,7 +9,8 @@ export default function Projects() {
       description:
         "A production-oriented AI-powered SaaS platform for digital art creation and collaboration featuring AI image generation, ERP-style order management, blockchain ownership, real-time artist collaboration, secure payments, and cross-platform web/mobile applications.",
       github: "https://github.com/Niyad-Labs/BCA-project",
-      download: "",
+      download:
+        "https://github.com/Niyad-Labs/BCA-project/blob/master/README.md",
     },
     {
       name: "Share With Node",
@@ -24,7 +25,7 @@ export default function Projects() {
       tech: "React • Three.js • React Three Fiber • Material UI • GSAP",
       description:
         "An interactive 3D developer portfolio featuring animated scenes, smooth camera transitions, responsive design, project showcase, and integrated contact functionality.",
-      github: "https://github.com/Niyad-Labs/My-Portfolio", // Update if different
+      github: "https://github.com/Niyad-Labs/My-Portfolio",
       download: "https://niyad-labs.github.io/My-Portfolio",
     },
     {
@@ -32,40 +33,40 @@ export default function Projects() {
       tech: "Node.js • Express.js • MongoDB • EJS • Multer",
       description:
         "A full-stack book management platform with CRUD operations, file uploads, author-book relationships, search, filtering, and dynamic server-rendered views.",
-      github: "https://github.com/Niyad-Labs/BookNesto", // Update if different
-      download: "",
+      github: "https://github.com/Niyad-Labs/BookNesto",
+      download: "https://github.com/Niyad-Labs/BookNesto",
     },
     {
       name: "Brandism",
       tech: "HTML • CSS • JavaScript • Bootstrap",
       description:
         "A professional client website showcasing branding, social media management, advertising video production, logo design, and web design services with a responsive interface.",
-      github: "", // Private if applicable
-      download: "",
+      github: "https://github.com/Niyad-Labs/Brandism",
+      download: "https://niyad-labs.github.io/Brandism",
     },
     {
       name: "To-Do Application",
       tech: "HTML • CSS • JavaScript",
       description:
         "A task management application featuring local storage, task editing, drag-and-drop organization, and priority-based task management.",
-      github: "https://github.com/Niyad-Labs", // Update repo if available
-      download: "",
+      github: "https://github.com/Niyad-Labs/To-Do_list_App",
+      download: "https://niyad-labs.github.io/To-Do_List_App",
     },
     {
-      name: "Scientific Calculator",
+      name: "Postfix Calculator",
       tech: "HTML • CSS • JavaScript",
       description:
         "A calculator implementing postfix expression evaluation with efficient mathematical operations and a clean responsive interface.",
-      github: "https://github.com/Niyad-Labs", // Update repo if available
-      download: "",
+      github: "https://github.com/Niyad-Labs/simple-Calcultor",
+      download: "https://niyad-labs.github.io/simple-Calcultor",
     },
     {
       name: "Ping Pong Game",
       tech: "HTML • CSS • JavaScript",
       description:
         "A browser-based Ping Pong game featuring smooth animations, responsive controls, collision detection, and real-time score tracking.",
-      github: "https://github.com/Niyad-Labs", // Update repo if available
-      download: "",
+      github: "https://github.com/Niyad-Labs/simple-pingPong-game",
+      download: "https://niyad-labs.github.io/simple-pingPong-game",
     },
   ];
 

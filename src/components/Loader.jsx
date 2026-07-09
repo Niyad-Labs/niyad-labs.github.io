@@ -1,6 +1,7 @@
 import { Box, Typography, CircularProgress } from "@mui/material";
 import { keyframes } from "@mui/system";
 import { useProgress } from "@react-three/drei";
+// import { useState } from "react";
 
 const pulse = keyframes`
   0% { opacity: .5; transform: scale(1); }
@@ -13,10 +14,16 @@ const slideTop = keyframes`
   to { transform: translateY(0); opacity:1; }
 `;
 
-export default function Loader() {
+export default function Loader({ onStart }) {
   const { progress } = useProgress();
+  const ready = progress >= 100;
   return (
     <Box
+      onClick={() => {
+        if (ready) {
+          onStart();
+        }
+      }}
       sx={{
         height: "100vh",
         position: "fixed",
@@ -57,13 +64,8 @@ export default function Loader() {
         }}
       />
 
-      {/* Left Side */}
-      <Box
-        sx={{
-          textAlign: "center",
-          zIndex: 2,
-        }}
-      >
+      {/* Logo */}
+      <Box sx={{ textAlign: "center", zIndex: 2 }}>
         <Typography
           variant="h2"
           sx={{
@@ -83,45 +85,39 @@ export default function Loader() {
             fontFamily: "BodoniModaSC",
           }}
         >
-          Loading...
+          {progress < 100 ? "Loading..." : "Click to start"}
         </Typography>
       </Box>
 
-      {/* Right Side */}
+      {/* Progress  */}
       <Box
         sx={{
-          position: "relative",
-          width: 70,
-          overflow: "hidden",
-          height: 80,
           zIndex: 2,
-          margin: "10px",
+          width: 100,
+          height: 100,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
         }}
       >
         <CircularProgress
-          size={80}
+          size={90}
           variant="determinate"
           value={progress}
           sx={{
-            color: "#ffd043", // Gold
-            // filter: "drop-shadow(0 0 10px #FFD700)",
-            position: "absolute",
-            top: "0",
-            left: "-5px",
+            color: "#ffd043",
+            filter: "drop-shadow(0 0 8px #ffd043)",
           }}
         />
 
         <Typography
-          variant="body2"
           sx={{
             position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
             fontFamily: "BodoniModaSC",
           }}
         >
-          {progress}%
+          {Math.round(progress)}%
         </Typography>
       </Box>
     </Box>
