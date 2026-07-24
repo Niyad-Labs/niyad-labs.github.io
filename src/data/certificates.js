@@ -7,7 +7,7 @@ export const certificates = [
     "credential": "https://www.mygreatlearning.com/certificate/CUDKHDXO",
   },
   {
-    "title": "Front End Web Development",
+    "title": "Front-End Web Development",
     "category": "Web Development",
     "provider": "Great Learning",
     "image": "certificates/certificate (37).webp",

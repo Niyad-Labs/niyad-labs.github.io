@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy React to GitHub Pages
 
 on:
   push:
@@ -7,6 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      VITE_EMAILJS_SERVICE_ID: ${{secrets.VITE_EMAILJS_SERVICE_ID}}
+      VITE_EMAILJS_TEMPLATE_ID: ${{secrets.VITE_EMAILJS_TEMPLATE_ID}}
+      VITE_EMAILJS_PUBLIC_KEY: ${{secrets.VITE_EMAILJS_PUBLIC_KEY}}
 
     steps:
       - name: Checkout Repository
@@ -20,5 +25,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Project
+      - name: Build
         run: npm run build
+
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{steps.deployment.outputs.page_url}}
+
+    steps:
+      - name: Deploy Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
