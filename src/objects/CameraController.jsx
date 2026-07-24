@@ -5,16 +5,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function CameraController({ start }) {
+export default function CameraController({ start, orbitEnabled }) {
   const { camera } = useThree();
-  camera.position.set(15, 15, -110);
+
   useEffect(() => {
     if (!start) return;
-
-    // starting cinematic position
+    // Starting position
     camera.position.set(15, 15, -110);
 
-    // intro fly-through
+    // Intro animation (like racing track fly-through)
     gsap.to(camera.position, {
       x: 0,
       y: 0,
@@ -23,27 +22,38 @@ export default function CameraController({ start }) {
       ease: "power3.inOut",
     });
 
-    // enable scroll only after intro
+    // Scroll animation
     const trigger = ScrollTrigger.create({
       trigger: document.body,
-
       start: "top top",
-
       end: "bottom bottom",
-
       scrub: true,
 
       onUpdate: (self) => {
-        camera.position.z = 10 - self.progress * 100;
+        camera.position.z = 0 - self.progress * 100 + 10;
       },
     });
 
     return () => trigger.kill();
-  }, [start, camera]);
+  }, [camera, start]);
 
   useFrame(() => {
     camera.lookAt(0, 1, -130);
   });
+
+  useEffect(() => {
+    if (!orbitEnabled) {
+      gsap.to(camera.position, {
+        x: 0,
+        y: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        onUpdate: () => {
+          camera.lookAt(0, 1, -130);
+        },
+      });
+    }
+  }, [orbitEnabled, camera]);
 
   return null;
 }

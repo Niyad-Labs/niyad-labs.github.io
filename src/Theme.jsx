@@ -18,6 +18,42 @@ export const tokens = (mode) => ({
           800: "#202020",
           900: "#000000",
         },
+        honeyBg: `
+            conic-gradient(from 60deg at 56.25% calc(425%/6),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg),
+            conic-gradient(from 60deg at 56.25% calc(425%/6),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg)
+              33px calc(1.73 * 33px),
+
+            conic-gradient(from 180deg at 43.75% calc(425%/6),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg),
+
+            conic-gradient(from 180deg at 43.75% calc(425%/6),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg)
+              33px calc(1.73 * 33px),
+
+            conic-gradient(from -60deg at 50% calc(175%/12),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg)
+              33px 0,
+
+            conic-gradient(from -60deg at 50% calc(175%/12),
+              transparent,
+              #262626 .5deg 119.5deg,
+              transparent 120deg)
+              0 calc(1.73 * 33px)
+
+            #121212
+          `,
       }
     : {
         floor: "#7b1ee6",
@@ -33,6 +69,42 @@ export const tokens = (mode) => ({
           800: "#e0e0e0",
           900: "#ffffff",
         },
+        honeyBg: `
+            conic-gradient(from 60deg at 56.25% calc(425%/6),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg),
+            conic-gradient(from 60deg at 56.25% calc(425%/6),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg)
+              33px calc(1.73 * 33px),
+
+            conic-gradient(from 180deg at 43.75% calc(425%/6),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg),
+
+            conic-gradient(from 180deg at 43.75% calc(425%/6),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg)
+              33px calc(1.73 * 33px),
+
+            conic-gradient(from -60deg at 50% calc(175%/12),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg)
+              33px 0,
+
+            conic-gradient(from -60deg at 50% calc(175%/12),
+              transparent,
+              #f2eb07 .5deg 119.5deg,
+              transparent 120deg)
+              0 calc(1.73 * 33px)
+
+            #ecbe13
+          `,
       }),
 });
 

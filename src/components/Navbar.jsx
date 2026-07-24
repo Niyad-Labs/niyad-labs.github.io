@@ -86,7 +86,7 @@ export default function Navbar() {
           <Button
             color="inherit"
             component="a"
-            href="/resume"
+            href="#/resume"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -95,7 +95,10 @@ export default function Navbar() {
           <Button color="inherit" onClick={() => scrollToProgress(0.3)}>
             Services
           </Button>
-          <Button color="inherit">Certificates</Button>
+          <Button color="inherit" component="a"
+            href="#/certificates"
+            target="_blank"
+            rel="noopener noreferrer">Certificates</Button>
           <Button color="inherit" onClick={() => scrollToProgress(0.54)}>
             Tech Stack
           </Button>
