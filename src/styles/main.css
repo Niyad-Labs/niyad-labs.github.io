@@ -2,7 +2,8 @@
   font-family: "BodoniModaSC";
   src: url("/fonts/BodoniModaSC.ttf") format("truetype");
   font-weight: normal;
-  font-style: normaL;
+  font-style: normal;
+  font-display: swap;
 }
 * {
   margin: 0;
