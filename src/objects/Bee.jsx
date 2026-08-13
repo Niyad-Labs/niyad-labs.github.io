@@ -69,7 +69,7 @@ export default function Bee() {
         gsap.to(groupRef.current.position, {
           y: 1,
           x: 3,
-          duration: 0.3,
+          duration: 0.5,
           ease: "power2.out",
         });
 
