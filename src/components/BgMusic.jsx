@@ -38,7 +38,7 @@ function BgMusic({ play }) {
     <Box
       sx={{
         position: "fixed",
-        background: "#404040ce",
+        background: "#000000b6",
         zIndex: 4,
         width: "30px",
         height: "30px",

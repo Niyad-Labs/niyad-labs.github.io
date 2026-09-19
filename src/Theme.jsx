@@ -6,7 +6,7 @@ export const tokens = (mode) => ({
   ...(mode == "dark"
     ? {
         floor: "#3b3b3b",
-        room: "#141414",
+        room: "#000000",
         grey: {
           100: "#ffffff",
           200: "#e0e0e0",

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Box } from "@mui/material";
 // objects
@@ -29,6 +29,17 @@ const Home = () => {
   const colors = tokens(theme.palette.mode);
   const [started, setStarted] = useState(false);
   const [orbitEnabled, setOrbitEnabled] = useState(false);
+
+  useEffect(() => {
+    if (started) {
+      document.documentElement.style.overflow = "auto";
+    } else {
+      document.documentElement.style.overflow = "hidden";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [started]);
   return (
     <>
       <Box
