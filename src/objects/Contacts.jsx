@@ -44,7 +44,13 @@ export default function Contacts() {
   };
 
   return (
-    <Html transform occlude distanceFactor={8} position={[0, 0, -108]}>
+    <Html
+      transform
+      occlude
+      distanceFactor={8}
+      position={[0, 0, -108]}
+      rotation={[0.08, 0, 0]}
+    >
       <Box
         sx={{
           width: 600,

@@ -13,7 +13,9 @@ export default function AboutSection() {
       <Text
         position={[0, 1.5, -19]}
         castShadow
-        font="/fonts/BodoniModaSC.ttf"
+        toneMapped={false}
+        material-type="MeshBasicMaterial"
+        // font="/fonts/BodoniModaSC.ttf"
         fontSize={0.4}
         maxWidth={14}
         fontWeight="bold"

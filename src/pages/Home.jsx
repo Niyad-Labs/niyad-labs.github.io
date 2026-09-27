@@ -23,6 +23,7 @@ import Contacts from "../objects/Contacts";
 import Navbar from "../components/Navbar";
 import SeoContent from "../components/SeoContent";
 import BgMusic from "../components/BgMusic";
+import LightRings from "../objects/LightRings";
 
 const Home = () => {
   const theme = useTheme();
@@ -63,13 +64,15 @@ const Home = () => {
           }}
           camera={{ fov: window.innerWidth < 768 ? 90 : 45 }}
         >
-          {orbitEnabled && <OrbitControls />}
+          <OrbitControls enabled={orbitEnabled} enableZoom={false} />
+
           <CameraController start={started} orbitEnabled={orbitEnabled} />
           <fog attach="fog" args={["#000000", 10, 40]} />
           <ambientLight />
           <PointLights />
           <color attach="background" args={[colors.room]} />
           <Floor />
+          <LightRings />
           <Bee />
           {/* <Name /> */}
           <AboutSection />

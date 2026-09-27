@@ -38,7 +38,7 @@ export default function CameraController({ start, orbitEnabled }) {
   }, [camera, start]);
 
   useFrame(() => {
-    camera.lookAt(0, 1, -130);
+    camera.lookAt(0, 3, -130);
   });
 
   useEffect(() => {

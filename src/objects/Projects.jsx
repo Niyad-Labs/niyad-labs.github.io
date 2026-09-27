@@ -87,10 +87,10 @@ export default function Projects() {
         Projects
       </Text>
       {/* back ground */}
-      <mesh position={[0.5, 0, -0.01]}>
+      <mesh position={[0, 0, -0.01]}>
         <planeGeometry args={[16, 8]} />
         <meshStandardMaterial color="#141414" transparent opacity={0.5} />
-        <Edges color="#727272" />
+        <Edges color="#000" />
       </mesh>
       {/* Left Project List */}
       {projects.map((project, index) => (
