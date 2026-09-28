@@ -64,7 +64,7 @@ const Home = () => {
           }}
           camera={{ fov: window.innerWidth < 768 ? 90 : 45 }}
         >
-          <OrbitControls enabled={orbitEnabled} enableZoom={false} />
+          {orbitEnabled && <OrbitControls enableZoom={false} />}
 
           <CameraController start={started} orbitEnabled={orbitEnabled} />
           <fog attach="fog" args={["#000000", 10, 40]} />

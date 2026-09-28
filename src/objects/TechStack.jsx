@@ -58,6 +58,8 @@ export default function TechStack() {
                 color="white"
                 anchorX="center"
                 anchorY="middle"
+                toneMapped={false}
+                depthOffset={-1}
               >
                 {tech}
               </Text>
