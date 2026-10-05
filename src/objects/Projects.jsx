@@ -75,7 +75,7 @@ export default function Projects() {
   return (
     <group position={[0, 2.1, -73]}>
       <Text
-        position={[0.5, 5, 0]}
+        position={[0.5, 4.7, 0]}
         font="/fonts/BodoniModaSC.ttf"
         fontSize={0.7}
         textAlign="center"
@@ -87,7 +87,7 @@ export default function Projects() {
         Projects
       </Text>
       {/* back ground */}
-      <mesh position={[0, 0, -0.01]}>
+      <mesh position={[0, -0.5, -0.01]}>
         <planeGeometry args={[16, 8]} />
         <meshStandardMaterial color="#141414" transparent opacity={0.5} />
         <Edges color="#000" />
@@ -96,7 +96,7 @@ export default function Projects() {
       {projects.map((project, index) => (
         <group
           key={index}
-          position={[-6, 3 - index * 0.8, 0]}
+          position={[-6, 2.5 - index * 0.8, 0]}
           onClick={() => setSelected(index)}
         >
           {/* Selected Lines */}
@@ -125,7 +125,7 @@ export default function Projects() {
       ))}
 
       {/* Right Side */}
-      <group position={[0, 2.5, 0]}>
+      <group position={[0, 2, 0]}>
         <Text
           position={[-0.5, 0, 0]}
           anchorX="left"

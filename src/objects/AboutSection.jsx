@@ -11,7 +11,7 @@ export default function AboutSection() {
         position={[0, 0, 0]}
       />
       <Text
-        position={[0, 1.5, -19]}
+        position={[0, 1.2, -19]}
         castShadow
         toneMapped={false}
         material-type="MeshBasicMaterial"

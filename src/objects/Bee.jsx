@@ -106,7 +106,7 @@ export default function Bee() {
         if (direction === 1 && -progress * 100 - 8 > -100) {
           // Scrolling Down: Fly to top-right, facing backward
           target.posX = 3;
-          target.posY = 1;
+          target.posY = 2.3;
           target.rotY = THREE.MathUtils.degToRad(-170);
           target.scale = 0.1;
 
@@ -120,7 +120,7 @@ export default function Bee() {
         } else {
           // Scrolling Up or Near End: Face front
           target.posX = 3;
-          target.posY = 1;
+          target.posY = 2.3;
           target.rotY = 0;
           target.scale = 0.1;
         }
