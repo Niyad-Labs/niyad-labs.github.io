@@ -25,3 +25,4 @@ dist-ssr
 
 /public/model/bee/versions/
 .env
+JSONHOSTING.md
