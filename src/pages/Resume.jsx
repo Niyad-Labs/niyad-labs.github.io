@@ -540,7 +540,7 @@ export default function Resume() {
               boxShadow: "none !important",
               overflow: "visible !important",
               background: "#fff !important",
-              lineHeight: "1 !important",
+              lineHeight: "1.3 !important",
             },
 
             // Show the selected format only
